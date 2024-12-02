@@ -6,13 +6,14 @@ interface SummaryItemProps {
     title: string;
     count: number;
     value: number;
+    header?: boolean;
 }
 
-const Summaryitem: React.FC<SummaryItemProps> = ({ image, title, count, value }) => {
+const Summaryitem: React.FC<SummaryItemProps> = ({ image, title, count, value, header }) => {
     return (
-        <div className="flex items-center justify-between w-full font-[500 text-summarycolor text-base px-5 py-2">
-            <div className="flex items-center gap-8 w-1/2">
-                <Image src={image} alt={title} width={24} height={24} />
+        <div className={`flex items-center justify-between w-full font-[500] text-summarycolor ${header ? 'text-sm' : 'text-xs'} px-5 py-2 ${header ? 'font-bold' : ''}`}>
+            <div className="flex items-center gap-6 w-1/2">
+                {!header && <Image src={image} alt={title} width={24} height={24} />}
                 <div className="">{title}</div>
             </div>
             <div className="w-1/2 text-left">{count}</div>

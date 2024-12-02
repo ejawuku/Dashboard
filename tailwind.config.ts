@@ -22,6 +22,8 @@ export default {
         'failedbordercolor': '#EB57574D',
         'pendingbordercolor': '#F2C94C4D',
         'summarycolor': '#3E516A',
+        'tableheadercolor': '#F2F8FF',
+        'headercolor': '#828282',
       },
       fontFamily: {
         sans: ['Urbanist', 'sans-serif'],
