@@ -21,6 +21,7 @@ export default {
         'successbordercolor': '#27AE604D',
         'failedbordercolor': '#EB57574D',
         'pendingbordercolor': '#F2C94C4D',
+        'summarycolor': '#3E516A',
       },
       fontFamily: {
         sans: ['Urbanist', 'sans-serif'],
