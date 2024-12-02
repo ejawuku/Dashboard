@@ -24,6 +24,9 @@ export default {
         'summarycolor': '#3E516A',
         'tableheadercolor': '#F2F8FF',
         'headercolor': '#828282',
+        'bannercolor': '#FFF7D6',
+        'bannertextcolor': '#D97008',
+        'bannetsetuptext': '#136DEB',
       },
       fontFamily: {
         sans: ['Urbanist', 'sans-serif'],
