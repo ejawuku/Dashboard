@@ -10,6 +10,7 @@ import Setupbanner from "./(components)/setup-banner";
 
 export default function Home() {
   return <div>
+<<<<<<< HEAD
     <div className="flex flex-row w-full h-screen">
       <Sidenav />
       <div className="w-full h-screen bg-white">
@@ -21,5 +22,8 @@ export default function Home() {
         </div>
       </div>
     </div>
+=======
+    <Setupbanner/>
+>>>>>>> parent of 55020af (sidenav changes)
   </div>;
 }
