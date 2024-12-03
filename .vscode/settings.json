@@ -6,6 +6,7 @@
         "pendingcolor",
         "Quickaccesscard",
         "successcolor",
+        "successtextcolor",
         "textcolor",
         "Transactionstatuscard",
         "valuecolor"

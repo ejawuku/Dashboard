@@ -14,6 +14,7 @@ export default {
         nav_hover: "var(--sidebar-hover)",
         'valuecolor': '#0B4CA7',
         'captextcolor': '#151515',
+        'subtitlecolor': '#49454FCC',
         'bordercolor': '#F3F4F6',
         'successcolor': '#27AE601A',
         'failedcolor': '#EB57571A',
@@ -28,6 +29,8 @@ export default {
         'bannercolor': '#FFF7D6',
         'bannertextcolor': '#D97008',
         'bannetsetuptext': '#136DEB',
+        'hrcolor': '#F2F2F2',
+        'dividercolor': '#E0E0E0',
       },
       fontFamily: {
         sans: ['Urbanist', 'sans-serif'],

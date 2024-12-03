@@ -14,7 +14,7 @@ const Table: React.FC<TableProps> = ({ data, title, date }) => {
                 <div className="text-sm text-headercolor font-[600]">{title}</div>
                 <div className="text-xs font-[600] text-headercolor">{date}</div>
             </div>
-            <hr/>
+            <hr className="border-hrcolor" />
 
             <table className="w-full border-none">
                 <tbody>
