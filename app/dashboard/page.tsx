@@ -7,20 +7,20 @@ import Sidenav from '../(components)/sidenav'
 
 const Dashboard = () => {
     return (
-        <div>
-            <div className="flex flex-row w-full h-screen">
-                <Sidenav />
-                <div className="w-full h-screen bg-white">
+        <div> 
+            <div className="flex flex-row w-full h-full md:screen">
+                {/* <Sidenav /> */}
+                <div className="w-full h-full bg-white">
                     <div>
-                        <Setupbanner />
-                        <div className="p-4 flex flex-row gap-4 w-full">
+                        <div className='hidden md:block'><Setupbanner /></div>
+                        <div className="p-4 flex flex-col md:flex-row gap-4 w-full">
                             <Quickaccesscard caption={"Total Transaction  Value"} balance={"0.00"} subtext="Will be on" />
                             <Quickaccesscard caption={"Float Balance"} balance={"0.00"} backgroundColor="bg-successcolor" subtext="As of" />
                             <Quickaccesscard caption={"Next Settlement Amount"} balance={"0.00"} subtext="Will be on" />
                         </div>
                         <div className="p-4 flex flex-row gap-4 w-full">
                             <Transactionstatuscard caption={"Successful Transactions"} count={"0"} backgroundColor="bg-successcolor" borderColor="border-successbordercolor" />
-                            <Transactionstatuscard caption={"Pending Transactions"} count={"0"} backgroundColor="bg-pendingcolor" borderColor="border-pendingbordercolor" />
+                            <div className='hidden md:block w-full'><Transactionstatuscard caption={"Pending Transactions"} count={"0"} backgroundColor="bg-pendingcolor" borderColor="border-pendingbordercolor" /></div>
                             <Transactionstatuscard caption={"Failed Transactions"} count={"0"} backgroundColor="bg-failedcolor" borderColor="border-failedbordercolor" />
                         </div>
                         <hr className="border-dividercolor" />

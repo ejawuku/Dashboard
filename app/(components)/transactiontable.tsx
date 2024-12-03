@@ -15,7 +15,7 @@ const TransactionTable: React.FC<TransactiontableProps> = ({ data, title, date }
                 <div className="text-sm text-headercolor font-[600]">{title}</div>
                 <div className="text-xs font-[600] text-headercolor">{date}</div>
             </div>
-            <hr className="border-hrcolor" />
+
 
             <table className="w-full border-none">
                 <tbody>
@@ -36,8 +36,8 @@ const TransactionTable: React.FC<TransactiontableProps> = ({ data, title, date }
                                     currency={item.currency}
                                     transactionType={item.transactionType}
                                     paymentStatus={item.paymentStatus}
-                                    selected={false} 
-                                    count={index+1}                                />
+                                    selected={false}
+                                    count={index + 1} />
                             </td>
                         </tr>
                     ))}
