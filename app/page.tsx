@@ -8,9 +8,10 @@ import Summaryitem from "./(components)/summary-item";
 import Table from "./(components)/table";
 import Setupbanner from "./(components)/setup-banner";
 import Dashboard from "./dashboard/page";
+import Transactions from "./transactions/page";
 
 export default function Home() {
   return <div>
-
+    <Transactions />
   </div>;
 }

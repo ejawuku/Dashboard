@@ -31,6 +31,8 @@ export default {
         'bannetsetuptext': '#136DEB',
         'hrcolor': '#F2F2F2',
         'dividercolor': '#E0E0E0',
+        'transactiontableheadercolor': '#F9FAFC',
+        'transactiontextcolor': '#687182',
       },
       fontFamily: {
         sans: ['Urbanist', 'sans-serif'],
