@@ -19,6 +19,7 @@ export default {
         'failedcolor': '#EB57571A',
         'pendingcolor': '#F2C94C1A',
         'successbordercolor': '#27AE604D',
+        'successtextcolor': '#0EAD69',
         'failedbordercolor': '#EB57574D',
         'pendingbordercolor': '#F2C94C4D',
         'summarycolor': '#3E516A',

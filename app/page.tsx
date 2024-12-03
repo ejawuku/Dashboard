@@ -10,7 +10,16 @@ import Setupbanner from "./(components)/setup-banner";
 
 export default function Home() {
   return <div>
-    <Sidenav/>
-    
+    <div className="flex flex-row w-full h-screen">
+      <Sidenav />
+      <div className="w-full h-screen bg-white">
+        <Setupbanner />
+        <div className="p-4 flex flex-row gap-4 w-full">
+          <Quickaccesscard caption={"Total Transaction  Value"} balance={"0.00"} />
+          <Quickaccesscard caption={"Float Balance"} balance={"0.00"} backgroundColor="bg-successcolor" />
+          <Quickaccesscard caption={"Next Settlement Amount"} balance={"0.00"} />
+        </div>
+      </div>
+    </div>
   </div>;
 }
