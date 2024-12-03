@@ -36,8 +36,8 @@ const TransactionTable: React.FC<TransactiontableProps> = ({ data, title, date }
                                     currency={item.currency}
                                     transactionType={item.transactionType}
                                     paymentStatus={item.paymentStatus}
-                                    selected={false}
-                                />
+                                    selected={false} 
+                                    count={index+1}                                />
                             </td>
                         </tr>
                     ))}

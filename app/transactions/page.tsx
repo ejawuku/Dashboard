@@ -16,7 +16,7 @@ const Transactions = () => {
                                 customerId: "CUS001",
                                 source: "Web",
                                 date: "2023-10-26",
-                                amount: 100,
+                                amount: 1000.98,
                                 product: "Product A",
                                 account: "ACC001",
                                 currency: "USD",
