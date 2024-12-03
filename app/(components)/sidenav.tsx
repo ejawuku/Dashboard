@@ -18,13 +18,13 @@ export default function Sidenav() {
           href: "",
         },
         {
-          label: "Transfers",
-          icon: "/icons/transfers-icon.svg",
+          label: "Settlements",
+          icon: "/icons/settlements-icon.svg",
           href: "",
         },
         {
-          label: "Settlements",
-          icon: "/icons/settlements-icon.svg",
+          label: "Transfers",
+          icon: "/icons/transfers-icon.svg",
           href: "",
         },
         {
@@ -43,7 +43,7 @@ export default function Sidenav() {
           href: "",
         },
         {
-          label: "Payment Links & QR",
+          label: "Payment Pages",
           icon: "/icons/payment-links-icon.svg",
           href: "",
         },
@@ -84,6 +84,8 @@ export default function Sidenav() {
           href: "",
         },
         { label: "Billing", icon: "/icons/billing-icon.svg", href: "" },
+        // { label: "Settings", icon: "/icons/billing-icon.svg", href: "" },
+        // { label: "Logout", icon: "/icons/billing-icon.svg", href: "" },
       ],
     },
   ];

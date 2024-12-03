@@ -10,6 +10,7 @@ import Setupbanner from "./(components)/setup-banner";
 
 export default function Home() {
   return <div>
-    <Setupbanner/>
+    <Sidenav/>
+    
   </div>;
 }
