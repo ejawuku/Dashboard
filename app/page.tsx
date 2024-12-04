@@ -10,11 +10,12 @@ import Dashboard from "./dashboard/page";
 import Transactions from "./transactions/page";
 import Transfers from "./transfers/page";
 import Settlements from "./settlements/page";
+import Disputes from "./disputes/page";
 
 export default function Home() {
   return (
     <div>
-      <Settlements />
+      <Disputes />
     </div>
   );
 }

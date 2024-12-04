@@ -4,61 +4,17 @@ import Table from "../(components)/table";
 import Transactiontable from "../(components)/transactiontable";
 import IconButton from "../(components)/icon-button";
 import Header from "../(components)/header";
-import Quickaccesscard from "../(components)/quick-access-card";
-import Gradientbutton from "../(components)/gradientbutton";
-import Transferstable from "../(components)/transferstable";
-import Settlementstable from "../(components)/settlementstable";
+import Disputestable from "../(components)/disputestable";
 
-const Settlements = () => {
+const Disputes = () => {
   return (
     <div>
       <div className="flex flex-row w-full h-screen">
         <Sidenav />
         <div className="w-full h-screen bg-white">
-          <Header title={"Settlements"} />
-          <div className="px-5 flex flex-col md:flex-row gap-4 w-full items-center justify-between pb-3 pt-5">
-            <div className="text-headercolor text-sm font-[600]">
-              Settlement Account
-            </div>
-            <div className="flex items-center gap-2">
-              <label className="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" className="sr-only peer" />
-                <div className="w-11 h-6 rounded-full peer peer-focus:ring-[#136DEB] dark:peer-focus:ring-[#136DEB] dark:bg-[#D2D5DA] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-['' after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#136DEB]"></div>
-              </label>
-              <span className="text-[#848A9C]  text-sm">
-                Enable Automated Transfer
-              </span>
-            </div>
-          </div>
-          <div className="pb-8 pt-3 px-10 flex flex-col md:flex-row gap-4 w-full">
-            <Quickaccesscard
-              caption={"Next Settlement Amount"}
-              balance={"0.00"}
-              subtext="Will be on"
-            />
-            <Quickaccesscard
-              caption={"Total Transaction  Value"}
-              balance={"0.00"}
-              subtext="As of"
-            />
-            <Quickaccesscard
-              caption={"Float Balance"}
-              balance={"0.00"}
-              subtext="Will be on"
-            />
-            <Quickaccesscard
-              caption={"Settlement Account"}
-              balance={"0.00"}
-              subtext="Will be on"
-              actiontext="Change Account Settings"
-            />
-          </div>
-          <hr className="border-dividercolor" />
+          <Header title={"Disputes"} />
           {/* <Table /> */}
-          <div className="px-10 pt-3 text-sm font-[600] text-headercolor">
-            Transfer History
-          </div>
-          <div className="mx-5 my-3 rounded-xl overflow-hidden shadow-sm border">
+          <div className="mx-5 mt-10 rounded-xl overflow-hidden shadow-sm border">
             <div className="w-full relative">
               <div className="w-full absolute bg-[#F4F7FCBF] text-white  z-10 backdrop-blur-sm top-0">
                 <div className="flex flex-col ">
@@ -100,10 +56,15 @@ const Settlements = () => {
                         textColor="text-white"
                         iconSize={16}
                       />
+                      <IconButton
+                        image="icons/send.svg"
+                        backgroundColor="bg-[#136DEB]"
+                        iconSize={16}
+                      />
                     </div>
                   </div>
 
-                  <div className="flex w-full text-xs font-[700] pb-3 text-transactiontextcolor">
+                  <div className="flex w-full text-xs pb-3 font-[700]  text-transactiontextcolor">
                     <div className="flex w-full grow items-start">
                       <input
                         type="checkbox"
@@ -114,12 +75,20 @@ const Settlements = () => {
                       <div className="w-2/5 truncate text-captextcolor text-sm font-[500]">
                         #
                       </div>
+                      <div className="w-full truncate">TRANSACTION ID</div>
+                      <div className="w-full truncate">CUSTOMER ID</div>
+                      <div className="w-full truncate">DATE</div>
+                      <div className="w-full truncate">AMOUNT</div>
                       <div className=" w-full truncate items-center">
-                        AMOUNT
+                        BALANCE
                       </div>
-                      <div className="w-full truncate">DESCRIPTION</div>
-                      <div className="w-full truncate">RECIPIENTS</div>
-                      <div className="w-full truncate">TIME</div>
+                      <div className=" w-full truncate items-center">
+                        TAXABLE AMOUNT
+                      </div>
+                      <div className=" w-full truncate items-center">
+                        E-LEVY
+                      </div>
+                      <div className="w-full truncate">TRANSACTION TYPE</div>
                       <div className=" w-full truncate items-center">
                         PAYMENT STATUS
                       </div>
@@ -140,13 +109,13 @@ const Settlements = () => {
                   </select>
                 </div>
               </div>
-              <Settlementstable
+              <Disputestable
                 data={[
                   {
-                    description: "1234567890",
-                    recipients: "CUS001",
+                    transactionId: "1234567890",
+                    customerId: "CUS001",
                     source: "Web",
-                    time: "2023-10-26",
+                    date: "2023-10-26",
                     amount: 1000.98,
                     product: "Product A",
                     account: "ACC001",
@@ -155,46 +124,70 @@ const Settlements = () => {
                     paymentStatus: "Success",
                   },
                   {
-                    description: "1234567890",
-                    recipients: "CUS001",
-                    source: "Web",
-                    time: "2023-10-26",
-                    amount: 1000.98,
-                    product: "Product A",
-                    account: "ACC001",
-                    currency: "USD",
-                    transactionType: "Deposit",
+                    transactionId: "9876543210",
+                    customerId: "CUS002",
+                    source: "Mobile",
+                    date: "2023-10-25",
+                    amount: 50,
+                    product: "Product B",
+                    account: "ACC002",
+                    currency: "EUR",
+                    transactionType: "Withdrawal",
+                    paymentStatus: "Success",
+                  },
+                  {
+                    transactionId: "1122334455",
+                    customerId: "CUS003",
+                    source: "API",
+                    date: "2023-10-24",
+                    amount: 200,
+                    product: "Product C",
+                    account: "ACC003",
+                    currency: "GBP",
+                    transactionType: "Transfer",
                     paymentStatus: "Failed",
                   },
                   {
-                    description: "1234567890",
-                    recipients: "CUS001",
-                    source: "Web",
-                    time: "2023-10-26",
-                    amount: 1000.98,
-                    product: "Product A",
-                    account: "ACC001",
-                    currency: "USD",
-                    transactionType: "Deposit",
+                    transactionId: "6677889900",
+                    customerId: "CUS004",
+                    source: "Branch",
+                    date: "2023-10-23",
+                    amount: 75,
+                    product: "Product D",
+                    account: "ACC004",
+                    currency: "JPY",
+                    transactionType: "Payment",
                     paymentStatus: "Success",
                   },
                   {
-                    description: "1234567890",
-                    recipients: "CUS001",
-                    source: "Web",
-                    time: "2023-10-26",
-                    amount: 1000.98,
-                    product: "Product A",
-                    account: "ACC001",
-                    currency: "USD",
-                    transactionType: "Deposit",
+                    transactionId: "1122334455",
+                    customerId: "CUS003",
+                    source: "API",
+                    date: "2023-10-24",
+                    amount: 200,
+                    product: "Product C",
+                    account: "ACC003",
+                    currency: "GBP",
+                    transactionType: "Transfer",
                     paymentStatus: "Failed",
                   },
                   {
-                    description: "1234567890",
-                    recipients: "CUS001",
+                    transactionId: "6677889900",
+                    customerId: "CUS004",
+                    source: "Branch",
+                    date: "2023-10-23",
+                    amount: 75,
+                    product: "Product D",
+                    account: "ACC004",
+                    currency: "JPY",
+                    transactionType: "Payment",
+                    paymentStatus: "Success",
+                  },
+                  {
+                    transactionId: "1234567890",
+                    customerId: "CUS001",
                     source: "Web",
-                    time: "2023-10-26",
+                    date: "2023-10-26",
                     amount: 1000.98,
                     product: "Product A",
                     account: "ACC001",
@@ -203,10 +196,22 @@ const Settlements = () => {
                     paymentStatus: "Success",
                   },
                   {
-                    description: "1234567890",
-                    recipients: "CUS001",
+                    transactionId: "6677889900",
+                    customerId: "CUS004",
+                    source: "Branch",
+                    date: "2023-10-23",
+                    amount: 75,
+                    product: "Product D",
+                    account: "ACC004",
+                    currency: "JPY",
+                    transactionType: "Payment",
+                    paymentStatus: "Success",
+                  },
+                  {
+                    transactionId: "1234567890",
+                    customerId: "CUS001",
                     source: "Web",
-                    time: "2023-10-26",
+                    date: "2023-10-26",
                     amount: 1000.98,
                     product: "Product A",
                     account: "ACC001",
@@ -215,46 +220,22 @@ const Settlements = () => {
                     paymentStatus: "Success",
                   },
                   {
-                    description: "1234567890",
-                    recipients: "CUS001",
-                    source: "Web",
-                    time: "2023-10-26",
-                    amount: 1000.98,
-                    product: "Product A",
-                    account: "ACC001",
-                    currency: "USD",
-                    transactionType: "Deposit",
+                    transactionId: "6677889900",
+                    customerId: "CUS004",
+                    source: "Branch",
+                    date: "2023-10-23",
+                    amount: 75,
+                    product: "Product D",
+                    account: "ACC004",
+                    currency: "JPY",
+                    transactionType: "Payment",
                     paymentStatus: "Success",
                   },
                   {
-                    description: "1234567890",
-                    recipients: "CUS001",
+                    transactionId: "1234567890",
+                    customerId: "CUS001",
                     source: "Web",
-                    time: "2023-10-26",
-                    amount: 1000.98,
-                    product: "Product A",
-                    account: "ACC001",
-                    currency: "USD",
-                    transactionType: "Deposit",
-                    paymentStatus: "Success",
-                  },
-                  {
-                    description: "1234567890",
-                    recipients: "CUS001",
-                    source: "Web",
-                    time: "2023-10-26",
-                    amount: 1000.98,
-                    product: "Product A",
-                    account: "ACC001",
-                    currency: "USD",
-                    transactionType: "Deposit",
-                    paymentStatus: "Success",
-                  },
-                  {
-                    description: "1234567890",
-                    recipients: "CUS001",
-                    source: "Web",
-                    time: "2023-10-26",
+                    date: "2023-10-26",
                     amount: 1000.98,
                     product: "Product A",
                     account: "ACC001",
@@ -273,4 +254,4 @@ const Settlements = () => {
   );
 };
 
-export default Settlements;
+export default Disputes;

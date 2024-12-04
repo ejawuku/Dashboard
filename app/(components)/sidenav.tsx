@@ -107,7 +107,7 @@ export default function Sidenav() {
       <div className="w-52 mx-auto mt-2" style={{ height: "810px" }}>
         {navItems.map((section, index) => (
           <div key={index} className="my-3">
-            <span className="text-blue-400 font-light text-sm">
+            <span className="text-[#529AFF] font-[500] text-xs">
               {section.category}
             </span>
             <ul className="">
@@ -128,7 +128,9 @@ export default function Sidenav() {
                         height={20}
                       />
                     )}
-                    <span className="font-semibold ml-3">{item.label}</span>
+                    <span className="font-[500] ml-3 text-sm text-[#C8DFFF]">
+                      {item.label}
+                    </span>
                   </Link>
                 </li>
               ))}
