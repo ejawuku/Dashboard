@@ -1,13 +1,13 @@
 import React from "react";
 import TransactionItem from "./transaction-item";
 
-interface TransactiontableProps {
+interface TransferstableProps {
   data: any[];
   title: string;
   date?: string;
 }
 
-const TransactionTable: React.FC<TransactiontableProps> = ({
+const Transferstable: React.FC<TransferstableProps> = ({
   data,
   title,
   date,
@@ -19,16 +19,14 @@ const TransactionTable: React.FC<TransactiontableProps> = ({
         <div className="text-xs font-[600] text-headercolor">{date}</div>
       </div>
 
-      <div className="w-full h-[calc(100vh/1.3)] scrollbar-hide overflow-y-auto  overflow-x-auto">
+      <div className="w-full h-[calc(100vh/1.7)] scrollbar-hide overflow-y-auto  overflow-x-auto">
         <table className="w-full border-collapse">
           <tbody>
             {data.map((item, index) => (
               <tr
                 key={index}
                 className={
-                  index % 2 === 0
-                    ? "bg-white"
-                    : "bg-transactiontableheadercolor"
+                  index % 2 === 0 ? "bg-white" : "bg-Transferstableheadercolor"
                 }
               >
                 <td>
@@ -57,4 +55,4 @@ const TransactionTable: React.FC<TransactiontableProps> = ({
   );
 };
 
-export default TransactionTable;
+export default Transferstable;

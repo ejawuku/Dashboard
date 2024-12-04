@@ -1,4 +1,3 @@
-
 import Sidenav from "./(components)/sidenav";
 import RegisterForm from "./(components)/register-form";
 import AuthHeader from "./(components)/auth-header";
@@ -9,9 +8,13 @@ import Table from "./(components)/table";
 import Setupbanner from "./(components)/setup-banner";
 import Dashboard from "./dashboard/page";
 import Transactions from "./transactions/page";
+import Transfers from "./transfers/page";
+import Settlements from "./settlements/page";
 
 export default function Home() {
-  return <div>
-    <Dashboard />
-  </div>;
+  return (
+    <div>
+      <Settlements />
+    </div>
+  );
 }
