@@ -7,6 +7,8 @@ interface QuickaccesscardProps {
   subtext?: string;
   date?: string;
   actiontext?: string;
+  textcolor?: string;
+  subtitlecolor?: string;
 }
 
 const Quickaccesscard: React.FC<QuickaccesscardProps> = ({
@@ -16,6 +18,8 @@ const Quickaccesscard: React.FC<QuickaccesscardProps> = ({
   subtext,
   date,
   actiontext,
+  textcolor,
+  subtitlecolor,
 }) => {
   return (
     <div
@@ -28,15 +32,27 @@ const Quickaccesscard: React.FC<QuickaccesscardProps> = ({
       <div className="text-xs font-[500] text-[#222222E5]">{caption}</div>
       <div
         className={`text-3xl font-[600]  ${
-          backgroundColor ? "text-successtextcolor" : "text-valuecolor"
+          textcolor ? `text-${textcolor}` : "text-valuecolor"
         }`}
       >
         GHS {balance}
       </div>
-      <div className="flex gap-1 text-base font-[400] text-subtitlecolor justify-between">
+      <div className="flex gap-1 text-base font-[400] justify-between">
         <div className="flex flex-row gap-1">
-          <div>{subtext}</div>
-          <div>{date}</div>
+          <div
+            className={
+              subtitlecolor ? `text-${subtitlecolor}` : "text-subtitlecolor"
+            }
+          >
+            {subtext}
+          </div>
+          <div
+            className={
+              subtitlecolor ? `text-${subtitlecolor}` : "text-subtitlecolor"
+            }
+          >
+            {date}
+          </div>
         </div>
         {actiontext && (
           <div className="text-xs text-[#3E516A] font-[500] underline decoration-solid">
