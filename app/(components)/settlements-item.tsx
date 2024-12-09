@@ -1,5 +1,6 @@
 interface SettlementItemProps {
   amount: string;
+  currency: string;
   description: string;
   recipients: string;
   time: string;
@@ -11,6 +12,7 @@ interface SettlementItemProps {
 
 const SettlementItem: React.FC<SettlementItemProps> = ({
   amount,
+  currency,
   paymentStatus,
   selected,
   count,
@@ -35,7 +37,9 @@ const SettlementItem: React.FC<SettlementItemProps> = ({
         <div className="w-2/5 truncate text-captextcolor text-sm font-[500]">
           {count}
         </div>
-        <div className="w-full text-sm font-[400]">{amount}</div>
+        <div className="w-full text-sm font-[400]">
+          {currency} {amount}
+        </div>
         <div className="w-full text-sm font-[400]">{description}</div>
         <div className="w-full text-sm font-[400]">{recipients}</div>
         <div className="w-full text-sm font-[400]">{time}</div>

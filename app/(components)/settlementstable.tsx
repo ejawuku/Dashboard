@@ -30,6 +30,7 @@ const Settlementstable: React.FC<TransferstableProps> = ({
               >
                 <td>
                   <SettlementItem
+                    currency={item.currency}
                     amount={item.amount}
                     paymentStatus={item.paymentStatus}
                     selected={false}
