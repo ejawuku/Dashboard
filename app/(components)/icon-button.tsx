@@ -5,6 +5,7 @@ interface IconButtonProps {
   outlined?: boolean;
   textColor?: string;
   iconSize?: number;
+  flipped?: boolean;
 }
 
 const IconButton: React.FC<IconButtonProps> = ({
@@ -14,6 +15,7 @@ const IconButton: React.FC<IconButtonProps> = ({
   outlined,
   textColor,
   iconSize = 20,
+  flipped = false,
 }) => {
   return (
     <button
@@ -21,7 +23,7 @@ const IconButton: React.FC<IconButtonProps> = ({
         outlined ? "border border-bordercolor shadow-sm" : ""
       } ${backgroundColor ? backgroundColor : "bg-black"} ${
         textColor ? textColor : "text-black"
-      }`}
+      } ${flipped ? "flex-row-reverse" : ""}`}
     >
       {image && (
         <img
@@ -29,7 +31,7 @@ const IconButton: React.FC<IconButtonProps> = ({
           alt={text || "icon"}
           width={iconSize}
           height={iconSize}
-          className={`${text ? "mr-2" : ""}`}
+          className={`${text ? "mx-2" : ""}`}
         />
       )}
       {text && <div>{text}</div>}

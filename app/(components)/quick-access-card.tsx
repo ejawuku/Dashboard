@@ -32,7 +32,7 @@ const Quickaccesscard: React.FC<QuickaccesscardProps> = ({
       <div className="text-xs font-[500] text-[#222222E5]">{caption}</div>
       <div
         className={`text-3xl font-[600]  ${
-          textcolor ? `text-successtextcolor` : "text-valuecolor"
+          textcolor ? "text-successtextcolor" : "text-valuecolor"
         }`}
       >
         GHS {balance}
