@@ -32,7 +32,7 @@ const Quickaccesscard: React.FC<QuickaccesscardProps> = ({
       <div className="text-xs font-[500] text-[#222222E5]">{caption}</div>
       <div
         className={`text-3xl font-[600]  ${
-          textcolor ? `text-${textcolor}` : "text-valuecolor"
+          textcolor ? `text-successtextcolor` : "text-valuecolor"
         }`}
       >
         GHS {balance}
@@ -41,7 +41,7 @@ const Quickaccesscard: React.FC<QuickaccesscardProps> = ({
         <div className="flex flex-row gap-1">
           <div
             className={
-              subtitlecolor ? `text-${subtitlecolor}` : "text-subtitlecolor"
+              subtitlecolor ? `text-successtextcolor` : "text-subtitlecolor"
             }
           >
             {subtext}
