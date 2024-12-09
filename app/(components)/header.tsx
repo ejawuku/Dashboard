@@ -19,10 +19,8 @@ const Header: React.FC<HeaderProps> = ({ title, notificationCount }) => {
               height={20}
               className="cursor-pointer"
             />
-            {notificationCount! > 0 && (
-              <span className="absolute top-0 right-0 -mt-1 -mr-1 bg-[#4190FF] text-white text-vs rounded-full w-4 h-4 flex items-center justify-center">
-                {notificationCount! > 99 ? "99+" : notificationCount}
-              </span>
+            {notificationCount! < 0 && (
+              <span className="absolute top-0 right-0 -mt-1 -mr-1 bg-[#4190FF]  border-2 border-white text-white text-vs rounded-full w-3 h-3 flex items-center justify-center"></span>
             )}
           </span>
           <span className="flex justify-between items-center w-12">
