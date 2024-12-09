@@ -10,14 +10,19 @@ import Header from "../(components)/header";
 const Dashboard = () => {
   return (
     <div className="flex flex-row h-screen w-screen overflow-hidden">
-      <Sidenav />
+      <div className="hidden md:block">
+        <Sidenav />
+      </div>
+
       <div className="w-full h-full bg-white flex flex-col">
-        <Header title={"My Dashboard"} />
+        <div className="hidden md:block">
+          <Header title={"My Dashboard"} />
+        </div>
         <div className="hidden md:block">
           <Setupbanner />
         </div>
         <div className="px-7 md:px-0 h-full overflow-y-auto">
-          <div className="flex w-full justify-between items-center pl-8 pr-10 pt-4">
+          <div className="flex hidden md:block w-full justify-between items-center pl-8 pr-10 pt-4">
             <div className="text-sm font-[600] text-[#828282]">
               Quick Access
             </div>
@@ -29,7 +34,7 @@ const Dashboard = () => {
             />
           </div>
           <div className="md:hidden font-[600] text-sm text-[#828282] pt-3">
-            Transaction Overview
+            Transaction Statuses
           </div>
           <div className="pt-3 flex flex-col md:flex-row gap-4 w-full pl-8 pr-20 pb-8">
             <Quickaccesscard
@@ -52,7 +57,7 @@ const Dashboard = () => {
           </div>
 
           <hr className="border-dividercolor" />
-          <div className="flex flex-row w-full">
+          <div className="flex flex-column md:flex-row w-full">
             <div className="w-full">
               <div className="flex w-full justify-between items-center px-8 pt-3">
                 <div className="text-sm font-[600] text-[#828282]">
@@ -158,7 +163,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <div className="w-[0.5px] bg-dividercolor flex-grow" />
+            <div className="w-[0.5px] bg-dividercolor flex-grow hidden md:block" />
 
             <div className="w-2/5">
               <div className="flex w-full justify-between items-center pl-5">
