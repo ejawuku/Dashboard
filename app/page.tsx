@@ -15,7 +15,7 @@ import Disputes from "./disputes/page";
 export default function Home() {
   return (
     <div>
-      <Disputes />
+      <Transfers />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Header from "../(components)/header";
 import Quickaccesscard from "../(components)/quick-access-card";
 import Gradientbutton from "../(components)/gradientbutton";
 import Transferstable from "../(components)/transferstable";
+import Transfertoggle from "../(components)/transfer-toggle";
 
 const Transfers = () => {
   return (
@@ -19,15 +20,7 @@ const Transfers = () => {
             <div className="text-headercolor text-sm font-[600]">
               Transfer Cards
             </div>
-            <div className="flex items-center gap-2">
-              <label className="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" className="sr-only peer" />
-                <div className="w-11 h-6 rounded-full peer peer-focus:ring-[#136DEB] dark:peer-focus:ring-[#136DEB] dark:bg-[#D2D5DA] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-['' after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#136DEB]"></div>
-              </label>
-              <span className="text-[#848A9C]  text-sm">
-                Enable Automated Transfer
-              </span>
-            </div>
+            <Transfertoggle isChecked={false} />
           </div>
           <div className="pb-8 pt-3 px-10 flex flex-col md:flex-row gap-4 w-full">
             <Quickaccesscard
