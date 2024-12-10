@@ -18,7 +18,7 @@ const Dashboard = () => {
       <div className="w-full h-full bg-white flex flex-col">
         <Header title={"My Dashboard"} />
         <div className="">
-          <Setupbanner />
+          <Setupbanner isbannerVisible={true} />
         </div>
         <div className="px-7 md:px-0 h-full overflow-y-auto">
           <div className="md:flex hidden md:flex-row w-full justify-between items-center pl-8 pr-10 pt-4">
@@ -61,7 +61,7 @@ const Dashboard = () => {
             />
           </div>
 
-          <hr className="border-dividercolor h-[0.5px]" />
+          <div className="h-[0.5px] bg-dividercolor flex-grow hidden md:block mt-4 md:mt-0" />
           <div className="flex flex-col md:flex-row w-full pt-2 md:pt-0">
             <div className="w-full md:w-3/5">
               <div className="hidden w-full justify-between items-center px-8 py-3 md:flex">

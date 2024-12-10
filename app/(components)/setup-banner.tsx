@@ -1,10 +1,21 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 
-const Setupbanner = () => {
-  return (
+interface SetupbannerProps {
+  isbannerVisible?: boolean;
+}
+
+const Setupbanner = ({ isbannerVisible = true }: SetupbannerProps) => {
+  const [isVisible, setIsVisible] = useState(isbannerVisible);
+
+  const handleMaybeLaterClick = () => {
+    setIsVisible(false);
+  };
+
+  return isVisible ? (
     <div className="bg-bannercolor text-sm py-2.5">
-      <div className="flex md:items-start items-start justify-start md:justify-center gap-2 pl-6">
+      <div className="flex md:items-start items-start justify-start md:justify-center gap-2 pl-6 relative">
         <Image
           src="/icons/danger.svg"
           alt="setupbanner"
@@ -22,20 +33,23 @@ const Setupbanner = () => {
         >
           Setup Account
         </button>
-        <div className="flex items-center gap-1 absolute right-4">
+        <button
+          className="flex items-center gap-1 absolute right-4 top-1/2 -translate-y-1/2"
+          onClick={handleMaybeLaterClick}
+        >
           <Image
             src="/icons/close.svg"
             alt="setupbanner"
             width={15}
             height={15}
           />
-          <div className=" text-[#0C66E4] text-xs md:text-sm font-[300] hidden md:block">
+          <div className="text-[#0C66E4] text-xs md:text-sm font-[300] hidden md:block">
             Maybe Later
           </div>
-        </div>
+        </button>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Setupbanner;
