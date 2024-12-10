@@ -6,6 +6,7 @@ import Setupbanner from "../(components)/setup-banner";
 import Sidenav from "../(components)/sidenav";
 import IconButton from "../(components)/icon-button";
 import Header from "../(components)/header";
+import EarningsChart from "../(components)/chart";
 
 const Dashboard = () => {
   return (
@@ -67,12 +68,21 @@ const Dashboard = () => {
                 <div className="text-sm font-[600] text-[#828282]">
                   Transaction Statuses
                 </div>
-                <select className="rounded-lg p-3 bg-[#CECECE4A] shadow-none text-xs text-headercolor focus:outline-none">
-                  <option value="today">Today</option>
-                  <option value="yesterday">Yesterday</option>
-                  <option value="week">This Week</option>
-                  <option value="month">This Month</option>
-                </select>
+                <div className="relative">
+                  <select className="rounded-lg font-[500] p-3 bg-[#CECECE4A] shadow-none text-xs text-[#201F21] focus:outline-none appearance-none">
+                    <option value="today">Today</option>
+                    <option value="yesterday">Yesterday</option>
+                    <option value="week">This Week</option>
+                    <option value="month">This Month</option>
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                    <img
+                      src="/icons/arrow-down-icon.svg"
+                      alt="Down Arrow"
+                      className="h-4 w-4"
+                    />
+                  </div>
+                </div>
               </div>
               <div className="md:hidden pb-5 md:pb-8 mt-4 flex flex-row gap-4 w-full md:px-8">
                 <Transactionstatuscard
@@ -190,11 +200,7 @@ const Dashboard = () => {
               <div className="flex w-full justify-between items-center md:pl-5">
                 <div className="text-sm font-[600] text-[#828282]">Charts</div>
               </div>
-              <img
-                src="/chart.png"
-                alt="Chart"
-                className="w-full md:pl-5 md:pr-8 h-fit"
-              />
+              <EarningsChart />
             </div>
           </div>
         </div>
