@@ -10,15 +10,13 @@ import Header from "../(components)/header";
 const Dashboard = () => {
   return (
     <div className="flex flex-row h-screen w-screen overflow-hidden">
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <Sidenav />
       </div>
 
       <div className="w-full h-full bg-white flex flex-col">
-        <div className="hidden md:block">
-          <Header title={"My Dashboard"} />
-        </div>
-        <div className="hidden md:block">
+        <Header title={"My Dashboard"} />
+        <div className="">
           <Setupbanner />
         </div>
         <div className="px-7 md:px-0 h-full overflow-y-auto">
@@ -33,10 +31,16 @@ const Dashboard = () => {
               textColor="text-[#201F21]"
             />
           </div>
-          <div className="md:hidden font-[600] text-sm text-[#828282] pt-3">
-            Transaction Statuses
+          <div className="flex flex-row justify-between">
+            <div className="md:hidden font-[600] text-sm text-[#828282] pt-3">
+              Transaction Statuses
+            </div>
+            <div className="md:hidden font-[600] text-sm text-[#828282] pt-3">
+              {"Date"}
+            </div>
           </div>
-          <div className="pt-3 flex flex-col md:flex-row gap-4 w-full md:pl-8 md:pr-20 pb-8">
+
+          <div className="pt-3 flex flex-col md:flex-row gap-4 w-full md:pl-8 md:pr-20 pb-6 md:pb-8">
             <Quickaccesscard
               caption={"Total Transaction  Value"}
               balance={"0.00"}
@@ -56,10 +60,10 @@ const Dashboard = () => {
             />
           </div>
 
-          <hr className="border-dividercolor" />
-          <div className="flex flex-col md:flex-row w-full">
+          <hr className="border-dividercolor h-[0.5px]" />
+          <div className="flex flex-col md:flex-row w-full pt-2 md:pt-0">
             <div className="w-full md:w-3/5">
-              <div className="hidden w-full justify-between items-center px-8 pt-3 md:flex">
+              <div className="hidden w-full justify-between items-center px-8 py-3 md:flex">
                 <div className="text-sm font-[600] text-[#828282]">
                   Transaction Statuses
                 </div>
@@ -70,7 +74,27 @@ const Dashboard = () => {
                   <option value="month">This Month</option>
                 </select>
               </div>
-              <div className="pb-8 pt-4 flex flex-row gap-4 w-full md:px-8">
+              <div className="md:hidden pb-5 md:pb-8 mt-4 flex flex-row gap-4 w-full md:px-8">
+                <Transactionstatuscard
+                  caption={"Successful"}
+                  count={"0"}
+                  backgroundColor="bg-successcolor"
+                  borderColor="border-successbordercolor"
+                />
+                <Transactionstatuscard
+                  caption={"Pending"}
+                  count={"0"}
+                  backgroundColor="bg-pendingcolor"
+                  borderColor="border-pendingbordercolor"
+                />
+                <Transactionstatuscard
+                  caption={"Failed"}
+                  count={"0"}
+                  backgroundColor="bg-failedcolor"
+                  borderColor="border-failedbordercolor"
+                />
+              </div>
+              <div className="hidden md:flex md:flex-row gap-4 w-full md:px-8">
                 <Transactionstatuscard
                   caption={"Successful Transactions"}
                   count={"0"}
@@ -90,7 +114,7 @@ const Dashboard = () => {
                   borderColor="border-failedbordercolor"
                 />
               </div>
-              <div className="md:px-8">
+              <div className="md:px-8 md:pt-4">
                 <Table
                   data={[
                     {
@@ -162,14 +186,9 @@ const Dashboard = () => {
             </div>
 
             <div className="w-[0.5px] bg-dividercolor flex-grow hidden md:block mt-4 md:mt-0" />
-            <div className="w-full md:w-2/5 mt-4 md:mt-0">
+            <div className="w-full md:w-2/5 mt-4 md:mt-3">
               <div className="flex w-full justify-between items-center md:pl-5">
                 <div className="text-sm font-[600] text-[#828282]">Charts</div>
-                <IconButton
-                  image="icons/settings.svg"
-                  backgroundColor="#CECECE4A"
-                  textColor="#201F21"
-                />
               </div>
               <img
                 src="/chart.png"
