@@ -20,13 +20,18 @@ ChartJS.register(
   Legend
 );
 
-const EarningsChart: React.FC = () => {
+interface ChartProps {
+  currentdata: number[];
+  previousdata: number[];
+}
+
+const EarningsChart: React.FC<ChartProps> = ({ currentdata, previousdata }) => {
   const data = {
     labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     datasets: [
       {
         label: "Today",
-        data: [100, 80, 120, 150, 510, 200, 10],
+        data: currentdata,
         borderColor: "#04BFDA",
         backgroundColor: "transparent",
         pointBorderColor: "#04BFDA",
@@ -38,7 +43,7 @@ const EarningsChart: React.FC = () => {
       },
       {
         label: "Previous Day",
-        data: [10, 200, 170, 50, 300, 200, 180],
+        data: previousdata,
         borderColor: "#E1E3E8",
         backgroundColor: "transparent",
         pointBorderColor: "#E1E3E8",
