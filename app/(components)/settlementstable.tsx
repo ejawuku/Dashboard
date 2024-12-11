@@ -20,7 +20,7 @@ const Settlementstable: React.FC<TransferstableProps> = ({
         <div className="text-xs font-[600] text-headercolor">{date}</div>
       </div>
 
-      <div className="w-full h-[calc(100vh/1.7)] scrollbar-hide overflow-y-auto  overflow-x-auto">
+      <div className="w-full h-[calc(100vh/1.5)] scrollbar-hide overflow-y-auto  overflow-x-auto">
         <table className="w-full border-collapse">
           <tbody>
             {data.map((item, index) => (

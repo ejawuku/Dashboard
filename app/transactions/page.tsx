@@ -9,7 +9,9 @@ const Transactions = () => {
   return (
     <div>
       <div className="flex flex-row w-full h-screen">
-        <Sidenav />
+        <div className="hidden lg:block">
+          <Sidenav />
+        </div>
         <div className="w-full h-screen bg-white">
           <Header title={"My Transactions"} />
           {/* <Table /> */}
