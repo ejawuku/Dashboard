@@ -69,7 +69,7 @@ const Dashboard = () => {
                   Transaction Statuses
                 </div>
                 <div className="relative">
-                  <select className="rounded-lg font-[500] p-3 bg-[#CECECE4A] shadow-none text-xs text-[#201F21] focus:outline-none appearance-none">
+                  <select className="rounded-lg w-fit font-[500] p-3 pr-10 bg-[#CECECE4A] shadow-none text-xs text-[#201F21] focus:outline-none appearance-none">
                     <option value="today">Today</option>
                     <option value="yesterday">Yesterday</option>
                     <option value="week">This Week</option>
