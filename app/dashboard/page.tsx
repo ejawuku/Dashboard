@@ -200,10 +200,12 @@ const Dashboard = () => {
               <div className="flex w-full justify-between items-center md:pl-5">
                 <div className="text-sm font-[600] text-[#828282]">Charts</div>
               </div>
-              <EarningsChart
-                currentdata={[100, 90, 89, 500, 70000, 200, 30]}
-                previousdata={[]}
-              />
+              <div className="p-1">
+                <EarningsChart
+                  currentdata={[100, 90, 89, 500, 70000, 200, 30]}
+                  previousdata={[]}
+                />
+              </div>
             </div>
           </div>
         </div>
