@@ -25,9 +25,7 @@ const Transferstable: React.FC<TransferstableProps> = ({
             {data.map((item, index) => (
               <tr
                 key={index}
-                className={
-                  index % 2 === 0 ? "bg-white" : "bg-Transferstableheadercolor"
-                }
+                className={index % 2 === 0 ? "bg-white" : "bg-[#F9FAFC]"}
               >
                 <td>
                   <TransactionItem

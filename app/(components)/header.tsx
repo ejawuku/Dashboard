@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
+import IconButton from "./icon-button";
 
 interface HeaderProps {
   title: string;
   notificationCount?: number;
   clicked?: boolean;
   issubpage?: boolean;
+  hastable?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -13,6 +15,7 @@ const Header: React.FC<HeaderProps> = ({
   notificationCount,
   clicked,
   issubpage,
+  hastable,
 }) => {
   const handleBackNavigation = () => {
     window.history.back();
@@ -82,7 +85,24 @@ const Header: React.FC<HeaderProps> = ({
               </span>
             </div>
 
-            <img src="/icons/menu.svg" />
+            {hastable == null ? (
+              <img src="/icons/menu.svg" />
+            ) : (
+              <div className="flex-row flex justify-between gap-3">
+                <IconButton
+                  image="icons/addicon.svg"
+                  text="Export"
+                  backgroundColor="bg-[#4CAF50]"
+                  textColor="text-white"
+                  iconSize={16}
+                />
+                <IconButton
+                  image="icons/send.svg"
+                  backgroundColor="bg-[#136DEB]"
+                  iconSize={16}
+                />
+              </div>
+            )}
           </div>
         </div>
       )}

@@ -6,7 +6,7 @@ interface Props {
 
 const Transfertoggle: React.FC<Props> = ({ isChecked }) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-start md:items-center gap-2">
       <label className="relative inline-flex items-center cursor-pointer">
         <input type="checkbox" className="sr-only peer" checked={isChecked} />
         <div

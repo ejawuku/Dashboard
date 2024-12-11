@@ -13,7 +13,7 @@ const Transactions = () => {
           <Sidenav />
         </div>
         <div className="w-full h-screen bg-white">
-          <Header title={"My Transactions"} />
+          <Header title={"My Transactions"} hastable={true} issubpage={true} />
           {/* <Table /> */}
           <div className="mx-5 mt-10 rounded-xl overflow-hidden shadow-sm border">
             <div className="w-full relative">
@@ -49,7 +49,7 @@ const Transactions = () => {
                       />
                     </div>
 
-                    <div className="flex flex-row justify-between gap-3">
+                    <div className="lg:flex hidden flex-row justify-between gap-3">
                       <IconButton
                         image="icons/addicon.svg"
                         text="Export"

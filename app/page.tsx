@@ -15,7 +15,7 @@ import Disputes from "./disputes/page";
 export default function Home() {
   return (
     <div>
-      <Settlements />
+      <Disputes />
     </div>
   );
 }
