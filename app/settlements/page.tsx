@@ -13,7 +13,7 @@ import Transfertoggle from "../(components)/transfer-toggle";
 const Settlements = () => {
   return (
     <div>
-      <div className="flex flex-row h-screen w-screen overflow-hidden">
+      <div className="flex flex-row h-full md:h-screen w-screen overflow-hidden">
         <div className="hidden lg:block">
           <Sidenav />
         </div>
