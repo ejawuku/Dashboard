@@ -10,7 +10,7 @@ import EarningsChart from "../(components)/chart";
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-row h-screen w-screen overflow-hidden">
+    <div className="flex flex-row h-screen w-screen">
       <div className="hidden lg:block">
         <Sidenav />
       </div>
@@ -20,7 +20,7 @@ const Dashboard = () => {
         <div className="">
           <Setupbanner isbannerVisible={true} />
         </div>
-        <div className="px-7 md:px-0 h-full overflow-y-auto">
+        <div className="px-7 md:px-0 md:pb-0 h-screen overflow-y-auto">
           <div className="md:flex hidden md:flex-row w-full justify-between items-center pl-8 pr-10 pt-4">
             <div className="text-sm font-[600] text-[#828282]">
               Quick Access
@@ -162,7 +162,7 @@ const Dashboard = () => {
                   date="Friday, 12 January 2024"
                 />
               </div>
-              <div className="pt-5 md:pt-8 md:px-8">
+              <div className="pt-5 md:pt-8 md:pb-20 md:px-8">
                 <Table
                   data={[
                     {

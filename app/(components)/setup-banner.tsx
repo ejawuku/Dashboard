@@ -15,7 +15,7 @@ const Setupbanner = ({ isbannerVisible = true }: SetupbannerProps) => {
 
   return isVisible ? (
     <div className="bg-bannercolor text-sm py-2.5">
-      <div className="flex md:items-start items-start justify-start md:justify-center gap-2 pl-6 relative">
+      <div className="flex md:items-start items-start justify-start md:justify-center md:gap-2 gap-1 pl-6 relative">
         <Image
           src="/icons/danger.svg"
           alt="setupbanner"
